@@ -1,0 +1,73 @@
+/* pages/detail/detail.wxss */
+.detailContainer{
+display:flex;
+flex-direction: column;
+}
+.headImg{
+width:100%;
+height:440rpx;
+}
+.company{
+font-size: 38rpx;
+font-weight: bold;
+margin: 30rpx;
+text-align:center 
+}
+.avatar_date{
+margin: 18rpx;
+position: relative;
+height:100rpx;
+/*border: 1rpx solid red;*/
+/*padding-bottom: 50rpx;*/
+}
+
+.avatar_date button{
+float:right;
+right: 50rpx;
+width: 100rpx;
+height: 60%;
+padding: 0rpx;
+font-size: 18px;
+margin-bottom: 10rpx;
+margin-top: 10rpx;
+border-radius: 30rpx;
+color: #fff;
+background-image: linear-gradient(to right, #7275dd , #2d32bc);
+text-align: center;
+}
+.avatar_date text{
+font-size: 28rpx;
+margin-top: 24rpx;
+margin-left:10rpx;
+margin-right: 100rpx;
+float:left;
+color: #555;
+}
+
+.collection_share_container{
+position: relative;
+}
+.collection_share{
+float:right;
+margin-right: 50rpx;
+}
+.collection_share image{
+width:90rpx;
+height:90rpx;
+margin-right: 20rpx;
+}
+.line{ /*设置虚线 */
+width: 90%;
+height:1rpx;
+background: #eee;
+position:absolute;
+top:45rpx;
+left:5%;
+z-index: -1; /*虚线优先级*/
+}
+
+.content{
+margin: 20rpx;
+margin-left: 30rpx;
+font-size: 32rpx;
+}

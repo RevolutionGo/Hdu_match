@@ -1,0 +1,27 @@
+<!--pages/zhaomu/index.wxml-->
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">{{pagetitle}}</view>
+    </view>
+
+  <view class="page__bd">
+     
+    <block wx:for="{{zhaomulist}}" wx:key="{{index}}">
+      <view class="sub-title" data-index="{{item._id}}" bindtap='detail'>
+        <wux-wing-blank size="default">
+            <wux-card title="{{item.title}}" extra="" thumb="../../assets/images/win.png" thumb-style="border-radius: 50%;">
+                <view slot="body">{{item.summary}}</view>
+                <view slot="footer">{{item.date}}</view>
+            </wux-card>
+        </wux-wing-blank>
+      </view>
+    </block>   
+
+  </view>
+
+ <!--悬浮按钮-->
+<view bindtap='edit'>
+    <image class="add_icon" src="../../assets/images/new.png"></image>
+</view>
+
+</view>

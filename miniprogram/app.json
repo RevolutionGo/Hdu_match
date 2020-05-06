@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/me/me",
+    "pages/zhaomu/index",
+    "pages/type/index",
+    "pages/edit/edit"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#7275dd",
+    "navigationBarTitleText": "杭电竞赛",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#cdcdcd",
+    "selectedColor": "#1296db",
+    "borderStyle": "white",
+    "backgroundColor": "#f7f7f8",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "assets/images/home.png",
+        "selectedIconPath": "assets/images/homeclick.png",
+        "text": "发现"
+      },
+      {
+        "pagePath": "pages/zhaomu/index",
+        "iconPath": "assets/images/message.png",
+        "selectedIconPath": "assets/images/messageclick.png",
+        "text": "招募"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "iconPath": "assets/images/icon_me.png",
+        "selectedIconPath": "assets/images/icon_meclick.png",
+        "text": "我"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

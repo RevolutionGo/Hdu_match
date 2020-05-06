@@ -1,0 +1,16 @@
+<!--pages/detail/detail.wxml-->
+
+<view class="detailContainer">
+
+  <image class="headImg" wx:if="{{content.img != ''}}" src="{{content.img}}"></image>
+  <text class="company">{{content.title}}</text>
+  <view class="avatar_date">
+    <text>发布于  {{time}}</text>
+    <button class='share' open-type='share'>分享</button>
+    <!--<image src="../../assets/images/share.png"></image>-->
+    
+  </view>
+
+  <text class="content">{{content.page}}</text>
+
+</view>

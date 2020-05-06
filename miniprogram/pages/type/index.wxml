@@ -1,0 +1,23 @@
+<!--page/index/index.wxml-->
+<view class="page__hd">
+    <view class="page__title">{{type}}</view>
+</view>
+
+<!--两列瀑布流-->
+<view class='gride'>
+  <!--左列瀑布流-->
+  <view class='item'>
+    <view wx:for='{{grides}}' wx:if='{{(item.index%2)==0}}' data-index="{{item._id}}" bindtap='detail'>
+      <image src='{{item.img}}' mode='widthFix'></image>
+      <text class='title'>{{item.title}}</text>
+    </view>
+  </view>
+
+  <!--右列瀑布流-->
+  <view class='item'>
+    <view wx:for='{{grides}}' wx:if='{{(item.index%2)==1}}' data-index="{{item._id}}" bindtap='detail'>
+      <image src='{{item.img}}' mode='widthFix'></image>
+      <text class='title'>{{item.title}}</text>
+    </view>
+  </view>
+</view> 

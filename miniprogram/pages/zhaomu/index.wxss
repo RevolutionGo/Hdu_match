@@ -1,0 +1,17 @@
+/* pages/type/index.wxss */
+.page__title{
+  color: #8a8a8a;
+  margin: 30rpx;
+  margin-left: 50rpx;
+  font-size: 40rpx
+}
+.sub-title{
+  margin-bottom: 30rpx;
+}
+.add_icon{
+  position: fixed;
+  width:94rpx;
+  height:94rpx;
+  bottom: 20rpx;
+  right: 20rpx;
+}

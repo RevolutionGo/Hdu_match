@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="page">
+  <swiper class="u-wrp-bnr" indicator-dots="true" autoplay="true" interval="3000" duration='1000' circular="true">
+      <block wx:for="{{imglist}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{item.img}}" class='u-img-slide' mode="aspectFill" data-index="{{item._id}}" bindtap='detail'/>
+        </swiper-item>
+      </block>
+  </swiper>
+  <wux-grids col="4">
+    <navigator url="/pages/type/index?type=电子编程">
+      <wux-grid thumb="../../assets/images/电子编程.png" label="电子编程" />
+    </navigator>
+
+    <navigator url="/pages/type/index?type=机械化工">
+      <wux-grid thumb="../../assets/images/机械化工.png" label="机械化工" />
+    </navigator>
+    
+    <navigator url="/pages/type/index?type=文学艺术">
+      <wux-grid thumb="../../assets/images/文学艺术.png" label="文学艺术" />
+    </navigator>
+
+    <navigator url="/pages/type/index?type=其他赛事">
+      <wux-grid thumb="../../assets/images/其他竞赛.png" label="其他赛事" />
+    </navigator>
+  </wux-grids>
+
+  <wux-cell-group title="热点信息">
+    <block wx:for="{{news}}">
+      <wux-cell title="{{item.title}}" is-link label="{{item.date}}" data-index="{{item._id}}" bindtap='detail'></wux-cell>
+    </block>
+  </wux-cell-group>
+</view>

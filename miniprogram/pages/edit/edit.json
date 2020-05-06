@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "wux-notice-bar": "../../dist/notice-bar/index"
+  }
+}

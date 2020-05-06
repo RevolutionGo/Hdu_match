@@ -1,0 +1,40 @@
+<!--index.wxml-->
+
+<view class='user'>
+  <!-- 未登录时 -->
+
+
+  <view class='login' >
+    <view class='name'>
+    <button class='logout_button' open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="userinfo-avatar" wx:if='{{!logged}}'>
+      登录
+    </button>
+   
+      <image src='{{avatarUrl}}'></image>
+      <text>{{username}}</text>
+      <text>{{place}}</text>
+    
+    </view>
+    <wux-cell thumb="../../assets/images/messageclick.png" title="咨询反馈" is-link open-type="contact" bind:contact="onContact"></wux-cell>
+    <view class='collection' wx:if='{{newsList.length}}'>
+      <view class="my">我的发布</view>
+
+      <view class='box' wx:for='{{newsList}}' wx:key='{{index}}' >
+        <view class='box_content' bindtap='goDetail' data-id='{{item._id}}' >
+          <image class='item_img' src='{{item.img}}'></image>
+          <view class='right'>
+            <text class='title'>{{item.title}}</text>
+            <text>{{item.summary}}</text>
+          </view>
+        </view>
+          <image src='../../assets/images/delete.png' class='delete' bindtap="delete_item" data-id='{{item._id}}'></image>
+          <image src='../../assets/images/edit.png' class='edit' bindtap="edit_item" data-id='{{item._id}}'></image>
+        
+      </view>
+    </view>
+
+    <view class='collection' wx:if='{{!newsList.length}}' style='text-align:center;padding-top:50rpx;'>
+      <text style='color:#666;'>您还没有发布过招募</text>
+    </view>
+  </view>
+</view>

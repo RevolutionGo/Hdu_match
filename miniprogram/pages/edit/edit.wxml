@@ -1,0 +1,49 @@
+<!--pages/edit/edit.wxml-->
+
+<view class="question-form">
+
+  <wux-notice-bar loop speed="100" mode="closable" content="请不要发布一些奇怪的信息哦！小心小黑屋伺候..." />
+  <form bindsubmit='res'>
+  <view class="question-input-area">
+
+    <!-- 标题  -->
+    <view class="question-title-wrap">
+      <input class="question-title" name="title" placeholder="请输入标题,如:XX比赛/项目招募队友" maxlength="40" placeholder-style="color:#b3b3b3;font-size:14px;" bindinput="handleTitleInput" value='{{title}}'></input>
+      <view class="title-input-counter">{{titleCount}}/40</view>
+    </view>
+
+    <!-- 正文  -->
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea class="weui-textarea" name="content" placeholder="请输入正文内容，如详细招募信息：团队简介、需求岗位（希望招募的队友具备何种技能等）、联系方式等" maxlength="500" placeholder-style="color:#b3b3b3;font-size:14px;" style="height: 300rpx" bindinput="handleContentInput" value='{{content}}'/>
+          <view class="weui-textarea-counter">{{contentCount}}/500</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="question-images-area">
+
+    <!-- 添加图片按钮  -->
+    <view class="question-images-tool">
+      <button class="addimg"  size="mini" bindtap="chooseImage" wx:if="{{!images}}">添加图片</button>
+    </view>
+
+    <!-- 图片缩略图  -->
+    <view class="question-images" wx:if="{{images!=''}}">
+      
+        <view class="q-image-wrap">
+          <image class="q-image" src="{{images}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+          <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">删除</view>
+        </view>
+     
+    </view>
+
+  </view>
+
+  <!-- 提交表单按钮  -->
+  <button class="weui-btn" form-type='submit' >提交</button>
+</form>
+</view>
